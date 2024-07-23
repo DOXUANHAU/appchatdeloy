@@ -1,0 +1,16 @@
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  color: white;
+  margin: 10px 0px;
+  background: #1da1f2;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}

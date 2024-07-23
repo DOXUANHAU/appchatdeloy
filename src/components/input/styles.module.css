@@ -1,0 +1,52 @@
+.textInput {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  padding-left: 15px;
+  height: 50px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.error {
+  font-size: 1.2rem;
+  color: red;
+  height: 1.7rem;
+  font-family: poppins;
+  display: flex;
+  justify-content: end;
+  margin-right: 1.5rem;
+}
+.shake {
+  animation: shake 1s ease-in-out;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.tick::before {
+  content: "✓";
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 50%;
+  background: green;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}

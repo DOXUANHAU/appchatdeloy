@@ -1,0 +1,205 @@
+.chatContainer {
+  border-radius: 0 10px 10px 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  background: #f5f7f8;
+  height: 90vh;
+  width: 90vw;
+}
+@media (max-width: 768px) {
+  .chatContainer {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+.chatContainer .header {
+  display: flex;
+  border-bottom: 1px solid #365e32;
+}
+.chatContainer .header .item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .chatContainer .header .item {
+    padding: 5px;
+    margin: 2px;
+  }
+}
+.chatContainer .header .item .img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.chatContainer .header .item .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.chatContainer .header .item .name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatContainer .header .item .name .info {
+  display: flex;
+  align-items: center;
+}
+.chatContainer .header .item .name .info span {
+  margin-right: 5px;
+}
+.chatContainer .header .item .name .icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+.chatContainer .header .item .name .icons .icon:hover {
+  color: #1A5319;
+}
+.chatContainer .main {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+@media (max-width: 768px) {
+  .chatContainer .main {
+    margin: 5px 5px 0 0;
+    padding: 2px;
+  }
+}
+.chatContainer .main .message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 60%;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.chatContainer .main .message.user {
+  background-color: #294B29;
+  color: #f1f1f1;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+.chatContainer .main .message.friend {
+  background-color: #597445;
+  color: #f1f1f1;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+.chatContainer .main .messageimg {
+  max-width: 60%;
+  margin: 5px 0;
+  align-self: flex-start;
+}
+.chatContainer .main .messageimg.userimg {
+  align-self: flex-end;
+}
+.chatContainer .emojiPicker {
+  position: absolute;
+  bottom: 90px;
+  right: 75px;
+  z-index: 1000;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+@media (max-width: 768px) {
+  .chatContainer .emojiPicker {
+    right: 10px;
+    bottom: 50px;
+  }
+}
+.chatContainer .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ecf0f3;
+  border-radius: 10px;
+  margin: 5px;
+  gap: 10px;
+}
+.chatContainer .footer .previewimg {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .chatContainer .footer {
+    margin: 2px;
+    gap: 5px;
+  }
+}
+.chatContainer .footer .input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #8E3E63;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #ecf0f3;
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .chatContainer .footer .input {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+.chatContainer .footer .sendItem {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .chatContainer .footer .sendItem {
+    gap: 5px;
+    font-size: 14px;
+  }
+}
+.chatContainer .footer .sendItem .icon {
+  cursor: pointer;
+}
+.chatContainer .footer .sendItem .icon:hover {
+  color: #03aed2;
+}
+.chatContainer .footer .sendItem .send {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px 10px 20px;
+  background: #8E3E63;
+  border-radius: 5px;
+  color: #ecf0f3;
+  cursor: pointer;
+  font-size: 13px;
+}
+.chatContainer .footer .sendItem .send span {
+  font-weight: bold;
+}
+.chatContainer .footer .sendItem .send:hover {
+  background: #FF7777;
+}
+@media (max-width: 768px) {
+  .chatContainer .footer .sendItem .send {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=styles.module.css.map */

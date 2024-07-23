@@ -1,0 +1,90 @@
+.friend {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #fff;
+  .friendItem {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%; // Thay đổi từ 250px thành 100% để tự động điều chỉnh theo chiều rộng cha
+
+      .img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .name {
+        flex: 1;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          span {
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        .text {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 12px;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 150px; // Đảm bảo không bị tràn dòng
+          }
+
+          .unread {
+            background-color: #ff6347;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            margin-left: auto;
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .name {
+          .info {
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

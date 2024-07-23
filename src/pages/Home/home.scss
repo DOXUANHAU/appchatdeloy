@@ -1,0 +1,98 @@
+.home {
+  box-sizing: border-box;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  background: #f5f7f8;
+  justify-content: center;
+  border-radius: 6px;
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100%;
+    width: 100%;
+    .list-container {
+      padding: 10px;
+      height: 100%;
+      color: #000;
+    }
+
+    .chat-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .empty-chat {
+        display: flex;
+        align-content: center;
+      }
+    }
+  }
+}
+
+// Media Queries cho responsive design
+@media (max-width: 1200px) {
+  .home-container {
+    .navMenu {
+      width: 200px;
+      flex: none;
+    }
+
+    .content-container {
+      .list-container {
+        width: 200px;
+        flex: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+
+    .navMenu {
+      width: 100%;
+      height: 60px;
+      flex: none;
+    }
+
+    .content-container {
+      flex-direction: column;
+
+      .list-container {
+        width: 100%;
+        height: 300px;
+        flex: none;
+      }
+
+      .chat-container {
+        width: 100%;
+        flex: 1;
+        height: calc(
+          100vh - 360px
+        ); // Trừ chiều cao của navMenu và list-container
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    .navMenu {
+      height: 50px;
+    }
+
+    .content-container {
+      .list-container {
+        height: 200px;
+      }
+
+      .chat-container {
+        height: calc(
+          100vh - 250px
+        ); // Trừ chiều cao của navMenu và list-container
+      }
+    }
+  }
+}

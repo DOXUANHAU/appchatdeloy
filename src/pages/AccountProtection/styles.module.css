@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #ccc;
+    --text-color: #333;
+    --font-size-base: 18px;
+    --left-width: 21.6%;
+    --right-width: 78.4%;
+    --border-color: #ddd;
+    --border-width: 2px;
+    --hover-color: #f5f5f5;
+
+}
+
+html {
+    font-size: var(--font-size-base);
+}
+
+.contain {
+    padding: 1.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 18px;
+
+}
+
+.main {
+    display: flex;
+    height: 80vh;
+    width: 80vw;
+}
+
+.left {
+    width: 27%;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-right: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.left .back-arrow {
+    position: absolute;
+    left: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.username {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.function {
+    margin-bottom: 2.5rem;
+}
+
+.function-item {
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 1rem 2rem;
+    border-left: 4px solid transparent;
+
+
+}
+
+.function-item:focus {
+    outline: none;
+    border-left: 4px solid #ff0000;
+}
+
+.function-item:active {
+    border-left: 4px solid #ff0000;
+}
+
+.function-item h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.function-item span {
+    color: darkgray;
+    font-size: 1rem;
+}
+
+.right {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f1efef;
+}
+
+.right .title {
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.right .title-info {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.right .title-info h3 {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.right .title-info button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0.4rem;
+}
+
+.right .info-item {
+    margin-bottom: 1.5rem;
+    color: gray;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.right .info-item label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.right .info-item button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0.4rem;
+}
+
+.info-item button:hover {
+    color: #0056b3;
+}
+.function-item:hover,
+.function-item:hover h4,
+.function-item:hover span {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 72px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.2s;
+}
+
+.toggle-switch label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + label {
+    background-color: var(--primary-color);
+}
+
+.toggle-switch input:checked + label:before {
+    transform: translateX(42px);
+}.switch-label {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 14px;
+     font-weight: bold;
+     color: #666;
+     transition: color 0.2s;
+ }
+
+.toggle-switch input:checked + label .switch-label {
+    color: white;
+}
